@@ -1,0 +1,5 @@
+<!--pages/other/other.wxml-->
+<view>{{  msg  }}</view>
+<button bindtap='clickMe'>点击我</button>
+
+<map class='mapStyle'></map>

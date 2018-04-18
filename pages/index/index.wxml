@@ -1,0 +1,26 @@
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+
+
+<view class='items-list'>
+  <view class='pro-item' wx:for="{{proList}}" bindtap='toDetail' data-index='{{index}}'>
+    <image class='pro-logo' src='{{item.headIcon}}' bindtap='toImage' data-src='{{item.headIcon}}'></image>
+    <view class='pro-body'>
+      <view class='pro-title'>{{item.nickName}}</view>
+      <text class='pro-desc'>{{item.userName}}</text>
+      <view class='pro-footer'>
+        <image class='btn-detail' src='/image/star_on.png'></image>
+        <button open-type="contact" class='btn-ask' >
+          <image src='/image/star_off.png' />
+        </button>
+        
+      </view>
+    </view>
+  </view>
+</view>
